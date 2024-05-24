@@ -1,0 +1,228 @@
+* {
+    padding: 0; /* Fjern all standard padding for alle elementer */
+    margin: 0; /* Fjern all standard margin for alle elementer */
+    max-height: 500px; /* Sett maksimal høyde for alle elementer til 500px */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Sett skrifttype til 'Roboto' med sans-serif som fallback */
+    background-color: #ffff; /* Sett bakgrunnsfarge til hvit */
+    display: grid; /* Bruk grid layout */
+    grid-template-columns: 1fr; /* En kolonne i grid */
+    grid-template-rows: auto; /* Automatiske rader i grid */
+    grid-template-areas: /* Definer grid-områder */
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    background-color: #D2691E; /* Sett bakgrunnsfarge til sjokoladebrun */
+}
+
+.header_main {
+    grid-area: header; /* Sett grid-område til header */
+    display: grid; /* Bruk grid layout */
+    grid-template-columns: 1fr 1fr 1fr; /* Tre kolonner i header grid */
+    grid-template-rows: auto; /* Automatiske rader i header grid */
+    background-color: #556B2F; /* Sett bakgrunnsfarge til mørk olivengrønn */
+    color: white; /* Sett tekstfarge til hvit */
+    align-items: center; /* Vertikalt sentrer innholdet */
+}
+
+.header_main #menu_header {
+    grid-column: 1; /* Plasser dette elementet i første kolonne */
+}
+
+.header_main #menu_header ul {
+    display: flex; /* Bruk flexbox layout */
+    list-style: none; /* Fjern standard punktmerking på listeelementer */
+    padding: 2rem; /* Legg til 2rem padding */
+}
+
+.header_main #menu_header ul li {
+    padding: 1rem; /* Legg til 1rem padding */
+    font-size: 1.9rem; /* Sett skriftstørrelse til 1.9rem */
+}
+
+.header_main #menu_bar {
+    grid-column-start: 2; /* Start i andre kolonne */
+    grid-column-end: 3; /* Slutt i tredje kolonne */
+    display: flex; /* Bruk flexbox layout */
+    justify-content: center; /* Sentrer innholdet horisontalt */
+}
+
+.header_main #menu_bar input {
+    width: 20rem; /* Sett bredde til 20rem */
+    height: auto; /* Sett automatisk høyde */
+    border: 1px solid #000; /* Sett en svart kantlinje */
+    border-radius: 5px; /* Rund kantene med 5px radius */
+}
+
+.header_main #menu_bar p {
+    font-size: 1.5rem; /* Sett skriftstørrelse til 1.5rem */
+}
+
+.header_main #logo_main {
+    grid-column: 3; /* Plasser dette elementet i tredje kolonne */
+    padding: 2rem; /* Legg til 2rem padding */
+    text-align: center; /* Sentrer teksten horisontalt */
+}
+
+.header_main #logo_main p {
+    font-size: 5rem; /* Sett skriftstørrelse til 5rem */
+}
+
+.sidebar {
+    grid-area: sidebar; /* Sett grid-område til sidebar */
+    background-color: #D2691E; /* Sett bakgrunnsfarge til sjokoladebrun */
+    padding: 5rem 0.5rem; /* Legg til 5rem padding øverst og nederst, 0.5rem på sidene */
+    align-items: center; /* Vertikalt sentrer innholdet */
+}
+
+#sidebar_container {
+    height: 430px; /* Sett høyde til 430px */
+    width: 220px; /* Sett bredde til 220px */
+    overflow-x: hidden; /* Skjul horisontal rulling */
+    display: flex; /* Bruk flexbox layout */
+    flex-direction: column; /* Organiser barn i en kolonne */
+    gap: 30px; /* Legg til 30px mellomrom mellom barn */
+    position: relative; /* Sett relativ posisjonering */
+    bottom: 80px; /* Flytt elementet 80px opp */
+    justify-content: left; /* Juster innhold til venstre */
+    text-align: left; /* Juster tekst til venstre */
+}
+
+.overflow-y {
+    overflow-y: scroll !important; /* Tillat vertikal rulling */
+}
+
+.sidebar {
+    padding-right: 2rem; /* Legg til 2rem padding på høyre side */
+}
+
+.sidebar #sidebar_options ul {
+    list-style: none; /* Fjern standard punktmerking på listeelementer */
+    padding: 1rem 0 1rem 0; /* Legg til 1rem padding øverst og nederst */
+}
+
+.sidebar #sidebar_options ul li {
+    padding: 0 0 1rem 0; /* Legg til 1rem padding nederst */
+    font-size: 25px; /* Sett skriftstørrelse til 25px */
+}
+
+h1, p {
+    font-family: Arial, Helvetica, sans-serif; /* Sett skrifttype til Arial med Helvetica og sans-serif som fallback */
+    font-weight: lighter; /* Sett fontvekt til lettere */
+}
+
+.main_main {
+    grid-column-start: 2; /* Start i andre kolonne */
+    grid-column-end: 3; /* Slutt i tredje kolonne */
+    display: flex; /* Bruk flexbox layout */
+    flex-direction: column; /* Organiser barn i en kolonne */
+    position: relative; /* Sett relativ posisjonering */
+    bottom: 55px; /* Flytt elementet 55px opp */
+}
+
+.main_main #info {
+    padding: 10%; /* Legg til 10% padding */
+    font-size: 1.5rem; /* Sett skriftstørrelse til 1.5rem */
+    font-weight: 600; /* Sett fontvekt til 600 */
+    color: #000; /* Sett tekstfarge til svart */
+}
+
+#infotext {
+    display: flex; /* Bruk flexbox layout */
+    justify-content: center; /* Sentrer innholdet horisontalt */
+    text-align: center; /* Sentrer teksten */
+}
+
+.main_main #map1 {
+    height: 100%; /* Sett høyde til 100% */
+    width: auto; /* Sett bredde automatisk */
+    margin-left: 10%; /* Legg til 10% margin på venstre side */
+    aspect-ratio: 1/1; /* Sett størrelsesforhold til 1:1 */
+    position: relative; /* Sett relativ posisjonering */
+    bottom: 40px; /* Flytt elementet 40px opp */
+    border-radius: 5px; /* Rund kantene med 5px radius */
+}
+
+.main_main #map iframe {
+    width: 60%; /* Sett bredde til 60% */
+    height: auto; /* Sett høyde automatisk */
+    aspect-ratio: 1; /* Sett størrelsesforhold til 1 */
+}
+
+#sidebar_options #btn {
+    padding: 1rem; /* Legg til 1rem padding */
+    width: 10rem; /* Sett bredde til 10rem */
+    height: auto; /* Sett høyde automatisk */
+    aspect-ratio: 2/1; /* Sett størrelsesforhold til 2:1 */
+    background-color: #000; /* Sett bakgrunnsfarge til svart */
+    color: #fff; /* Sett tekstfarge til hvit */
+    border: none; /* Fjern kantlinje */
+    border-radius: 5px; /* Rund kantene med 5px radius */
+    cursor: pointer; /* Sett musepeker til håndpeker */
+    font-size: 1.9rem; /* Sett skriftstørrelse til 1.9rem */
+}
+
+#sidebar_options #myList {
+    display: none; /* Skjul elementet */
+    padding: 1rem; /* Legg til 1rem padding */
+    background-color: #99c9e9; /* Sett bakgrunnsfarge til lys blå */
+    border-radius: 5px; /* Rund kantene med 5px radius */
+    position: absolute; /* Sett absolutt posisjonering */
+    z-index: 1; /* Sett z-indeks til 1 for å bringe det foran andre elementer */
+}
+
+#sidebar_options #myList li {
+    font-size: 1.5rem; /* Sett skriftstørrelse til 1.5rem */
+    font-weight: 600; /* Sett fontvekt til 600 */
+    color: #ffff; /* Sett tekstfarge til hvit */
+}
+
+.images_main {
+    grid-column-start: 3; /* Start i tredje kolonne */
+    grid-column-end: 4; /* Slutt i fjerde kolonne */
+    display: flex; /* Bruk flexbox layout */
+    flex-direction: column; /* Organiser barn i en kolonne */
+    text-align: center; /* Sentrer teksten */
+    padding: 5rem; /* Legg til 5rem padding */
+    position: relative; /* Sett relativ posisjonering */
+    bottom: 55px; /* Flytt elementet 55px opp */
+}
+
+.images_main #card1 {
+    width: 32rem; /* Sett bredde til 32rem */
+    height: auto; /* Sett høyde automatisk */
+    max-width: 250px; /* Sett maksimal bredde til 250px */
+    padding: 2rem 0 2rem 0; /* Legg til 2rem padding øverst og nederst */
+    position: relative; /* Sett relativ posisjonering */
+}
+
+.images_main #card2 {
+    width: 32rem; /* Sett bredde til 32rem */
+    height: auto; /* Sett høyde automatisk */
+    max-width: 250px; /* Sett maksimal bredde til 250px */
+    padding: 2rem 0 2rem 0; /* Legg til 2rem padding øverst og nederst */
+    position: relative; /* Sett relativ posisjonering */
+    bottom: 10px; /* Flytt elementet 10px opp */
+}
+
+footer {
+    grid-area: footer; /* Sett grid-område til footer */
+    background-color: #d8d8d8; /* Sett bakgrunnsfarge til lys grå */
+    background-color: #556B2F; /* Sett bakgrunnsfarge til mørk olivengrønn */
+    padding: 1rem; /* Legg til 1rem padding */
+    display: flex; /* Bruk flexbox layout */
+    justify-content: space-between; /* Fordel plass mellom elementene */
+    font-size: 1rem; /* Sett skriftstørrelse til 1rem */
+    font-weight: 600; /* Sett fontvekt til 600 */
+    color: #000; /* Sett tekstfarge til svart */
+    margin-bottom: 30rem; /* Legg til 30rem margin nederst */
+}
+
+footer #copyright {
+    align-self: center; /* Vertikalt sentrer elementet */
+    text-align: center; /* Sentrer teksten */
+    font-size: 0.9rem; /* Sett skriftstørrelse til 0.9rem */
+    font-weight: lighter; /* Sett fontvekt til lettere */
+}

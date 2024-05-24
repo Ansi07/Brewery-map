@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styleMain.css"> <!-- link til css fil for styling-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/> <!-- link til font awesome for ikoner-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" 
+    crossorigin=""/> <!-- link til leaflet css for kart-->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script> <!-- javascript leaflet for kart-->
+    <link rel="stylesheet" href="/Style/Style.css">  <!-- Link til css en annen css fil for styling-->
+    <title>My API - main</title> <!-- Tittel på nettsiden -->
+</head>
+<body>
+    <!-- klasse for navigasjonbar-->
+    <header class="header_main">
+        <div id="menu_bar"> <!-- id for styling-->
+            <input id="searchbar" type="text" placeholder=" text here!" name="searchbar"> <!-- Søkebar-->
+            <button type="submit" onclick="show_me()"><p><i class="fa-solid fa-magnifying-glass"></i></p></button> <!-- enter knapp-->
+        </div>
+
+        <!-- logo id-->
+        <div id="logo_main">
+            <p><i class="fa-solid fa-plate-wheat"></i></p> <!-- Logo-->
+        </div>
+    </header>
+
+    <!-- Sidebar klasse og id-->
+    <section class="sidebar" id="sidebar">
+        <div id="sidebar_container"> <!-- box for bryggeri informasjon på sidebar-->
+        </div>
+
+    </section>
+
+    <!--hovedseksjon -->
+    <section class="main_main"> <!--Definerer hovedseksjonen med en klasse for styling-->
+        <div id="info"> <!--id for informasjoninnhold-->
+            <h1 id="infotext">Brewery Map</h1> <!-- Overskrift-->
+            <p id="infotext">Search up brewres in USA. For the best possible experience.</p> <!-- Beskrivelse-->
+        </div>
+
+        <!-- Kartet -->
+        <div id="map1"></div>
+     </section>
+
+     <!-- klasse for bilder-->
+    <section class="images_main">
+        <img id="card1" src="/Style/636658736060389562-GuinnessExterior-2.webp" alt="Brewery"> <!-- Bilde 1 bryggeri-->
+        <img id="card2" src="/Style/USA-Breweries-b463cbc32263.avif" alt="beer"> <!-- bilde 2 øl-->
+    </section> 
+
+    <footer>
+        <div id="copyright"> <!-- id for styling-->
+            &copy; 2024 Brewery Finder. All rights reserved. <!-- Opphavsrett melding-->
+        </div>
+    </footer> 
+
+    <script src="Menu.js"></script> <!-- link til javascript fil-->
+
+    
+</body>
+</html>
